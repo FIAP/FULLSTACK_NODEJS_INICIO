@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><i class="fas fa-users"></i> User Management</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/users">Home</a></li>
+                    <li><a href="/users/new" class="btn-add"><i class="fas fa-plus-circle"></i> Add New User</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2><i class="fas fa-list"></i> User List</h2>
+        <ul>
+            <% users.forEach(user => { %>
+                <li>
+                    <strong>Name:</strong> <%= user.name %> <br>
+                    <strong>Email:</strong> <%= user.email %> <br>
+                    <strong>Age:</strong> <%= user.age %> <br>
+                    <a href="/users/<%= user._id %>" class="edit"><i class="fas fa-edit"></i> Edit</a>
+                    <form action="/users/<%= user._id %>/delete" method="POST">
+                        <button type="submit" class="delete"><i class="fas fa-trash-alt"></i> Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

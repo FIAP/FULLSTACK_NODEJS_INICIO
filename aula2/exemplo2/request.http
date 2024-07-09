@@ -1,0 +1,4 @@
+### Get Stock Information
+GET http://localhost:3030/stocks/MSFT
+Authorization: batman batman batman
+Content-Type: application/json

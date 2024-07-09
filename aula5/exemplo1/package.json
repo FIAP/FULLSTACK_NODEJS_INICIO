@@ -1,0 +1,17 @@
+{
+  "name": "simple-rest-api",
+  "version": "1.0.0",
+  "description": "Example project demonstrating a simple RESTful API with Express.js",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

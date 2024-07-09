@@ -1,0 +1,30 @@
+### Listar todos os usuários
+GET http://localhost:3030/users
+Content-Type: application/json
+
+### Criar um novo usuário
+POST http://localhost:3030/users
+Content-Type: application/json
+
+{
+    "id": "1",
+    "name": "Thiago S Adriano",
+    "email": "prof.tadriano@fiap.com.br"
+}
+
+### Obter um usuário pelo ID
+GET http://localhost:3030/users/1
+Content-Type: application/json
+
+### Atualizar um usuário
+PUT http://localhost:3030/users/1
+Content-Type: application/json
+
+{
+    "name": "Thiago Adriano",
+    "email": "proftadriano@fiap.com.br"
+}
+
+### Deletar um usuário
+DELETE http://localhost:3030/users/1
+Content-Type: application/json

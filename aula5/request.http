@@ -1,0 +1,31 @@
+### Listar todos os usuários
+GET http://localhost:3000/api/users
+Content-Type: application/json
+
+### Criar um novo usuário
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Agnes Fernandes Adriano",
+    "email": "agnes@example.com",
+    "age": 4
+}
+
+### Obter um usuário pelo ID
+GET http://localhost:3000/api/users/{{user_id}}
+Content-Type: application/json
+
+### Atualizar um usuário
+PUT http://localhost:3000/api/users/{{user_id}}
+Content-Type: application/json
+
+{
+     "name": "Agnes F Adriano",
+    "email": "agnes@example.com",
+    "age": 4
+}
+
+### Deletar um usuário
+DELETE http://localhost:3000/api/users/{{user_id}}
+Content-Type: application/json
